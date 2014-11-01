@@ -1,13 +1,13 @@
 <?php
-/* @var $this SnipetController */
-/* @var $model Snipet */
+/* @var $this SnippetController */
+/* @var $model Snippet */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'snipet-form',
+	'id'=>'snippet-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -26,9 +26,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'code_snipet'); ?>
-		<?php echo $form->textArea($model,'code_snipet',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'code_snipet'); ?>
+		<?php echo $form->labelEx($model,'code_snippet'); ?>
+		<?php echo $form->textArea($model,'code_snippet',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'code_snippet'); ?>
 	</div>
 
 	<div class="row buttons">

@@ -1,21 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "o_snipet".
+ * This is the model class for table "o_snippet".
  *
- * The followings are the available columns in table 'o_snipet':
+ * The followings are the available columns in table 'o_snippet':
  * @property integer $id
  * @property string $code_title
- * @property string $code_snipet
+ * @property string $code_snippet
  */
-class Snipet extends CActiveRecord
+class Snippet extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'o_snipet';
+		return 'o_snippet';
 	}
 
 	/**
@@ -26,11 +26,11 @@ class Snipet extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('code_title, code_snipet', 'required'),
+			array('code_title, code_snippet', 'required'),
 			array('code_title', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, code_title, code_snipet', 'safe', 'on'=>'search'),
+			array('id, code_title, code_snippet', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,7 +53,7 @@ class Snipet extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'code_title' => 'Title of code snippet',
-			'code_snipet' => 'Full code of snippet',
+			'code_snippet' => 'Full code of snippet',
 		);
 	}
 
@@ -77,7 +77,7 @@ class Snipet extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('code_title',$this->code_title,true);
-		$criteria->compare('code_snipet',$this->code_snipet,true);
+		$criteria->compare('code_snippet',$this->code_snippet,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -88,7 +88,7 @@ class Snipet extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Snipet the static model class
+	 * @return Snippet the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

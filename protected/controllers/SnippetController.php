@@ -1,6 +1,6 @@
 <?php
 
-class SnipetController extends Controller
+class SnippetController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -62,14 +62,14 @@ class SnipetController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Snipet;
+		$model=new Snippet;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Snipet']))
+		if(isset($_POST['Snippet']))
 		{
-			$model->attributes=$_POST['Snipet'];
+			$model->attributes=$_POST['Snippet'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -91,9 +91,9 @@ class SnipetController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Snipet']))
+		if(isset($_POST['Snippet']))
 		{
-			$model->attributes=$_POST['Snipet'];
+			$model->attributes=$_POST['Snippet'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -122,7 +122,7 @@ class SnipetController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Snipet');
+		$dataProvider=new CActiveDataProvider('Snippet');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -133,10 +133,10 @@ class SnipetController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Snipet('search');
+		$model=new Snippet('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Snipet']))
-			$model->attributes=$_GET['Snipet'];
+		if(isset($_GET['Snippet']))
+			$model->attributes=$_GET['Snippet'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -147,12 +147,12 @@ class SnipetController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Snipet the loaded model
+	 * @return Snippet the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Snipet::model()->findByPk($id);
+		$model=Snippet::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -160,11 +160,11 @@ class SnipetController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Snipet $model the model to be validated
+	 * @param Snippet $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='snipet-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='snippet-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

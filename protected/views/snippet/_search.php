@@ -1,6 +1,6 @@
 <?php
-/* @var $this SnipetController */
-/* @var $model Snipet */
+/* @var $this SnippetController */
+/* @var $model Snippet */
 /* @var $form CActiveForm */
 ?>
 
@@ -22,8 +22,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'code_snipet'); ?>
-		<?php echo $form->textArea($model,'code_snipet',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->label($model,'code_snippet'); ?>
+		<?php echo $form->textArea($model,'code_snippet',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
 	<div class="row buttons">

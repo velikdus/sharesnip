@@ -1,18 +1,18 @@
 <?php
-/* @var $this SnipetController */
+/* @var $this SnippetController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Snipets',
+	'Snippets',
 );
 
 $this->menu=array(
-	array('label'=>'Create Snipet', 'url'=>array('create')),
-	array('label'=>'Manage Snipet', 'url'=>array('admin')),
+	array('label'=>'Create Snippet', 'url'=>array('create')),
+	array('label'=>'Manage Snippets', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Snipets</h1>
+<h1>Snippets</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

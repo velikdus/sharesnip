@@ -1,6 +1,6 @@
 <?php
-/* @var $this SnipetController */
-/* @var $model Snipet */
+/* @var $this SnippetController */
+/* @var $model Snippet */
 
 $this->breadcrumbs=array(
 	'Snippets'=>array('index'),
@@ -18,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#snipet-grid').yiiGridView('update', {
+	$('#snippet-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -36,13 +36,13 @@ $('.search-form form').submit(function(){
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'snipet-grid',
+	'id'=>'snippet-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
 		'code_title',
-		'code_snipet',
+		'code_snippet',
 		array(
 			'class'=>'CButtonColumn',
 		),

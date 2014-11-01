@@ -1,6 +1,6 @@
 <?php
-/* @var $this SnipetController */
-/* @var $data Snipet */
+/* @var $this SnippetController */
+/* @var $data Snippet */
 ?>
 
 <div class="view">
@@ -13,8 +13,8 @@
 	<?php echo CHtml::encode($data->code_title); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('code_snipet')); ?>:</b>
-	<?php echo CHtml::encode($data->code_snipet); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('code_snippet')); ?>:</b>
+	<?php echo CHtml::encode($data->code_snippet); ?>
 	<br />
 
 
