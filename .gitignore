@@ -2,3 +2,4 @@
 !/assets/.gitignore
 /.idea/*
 /protected/runtime/*
+!/protected/runtime/.gitignore
