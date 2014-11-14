@@ -1,5 +1,9 @@
 <?php
 
+/** @property $username */
+/** @property $crypted_password */
+/** @property $email */
+/** @property $salt */
 class User extends CActiveRecord
 {
     public $password;

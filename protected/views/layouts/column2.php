@@ -1,5 +1,6 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
+        <?php $this->renderPartial('//layouts/_flashes'); ?>
 <div class="span-19">
 	<div id="content">
 		<?php echo $content; ?>

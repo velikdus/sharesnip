@@ -21,7 +21,7 @@ class SignupTest extends WebTestCase
         $this->type('css=#User_password','123456');
         $this->type('css=#User_password_repeat','123456');
         $this->clickAtAndWait('css=#create_user_button');
-        $this->assertTextPresent('You');
+        $this->assertTextPresent(Helpers::getSuccessSignupMessage());
     }
 
     public function testUnsuccessfulSignup()

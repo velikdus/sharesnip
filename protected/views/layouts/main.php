@@ -33,7 +33,7 @@
                 array('label' => 'Snippets', 'url' => array('/snippet/index')),
                 array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
                 array('label' => 'Contact', 'url' => array('/site/contact')),
-                array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
+                array('label' => 'Login', 'url' => array(Helpers::createUrl('site/login')), 'visible' => Yii::app()->user->isGuest),
                 array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
             ),
         )); ?>
@@ -45,11 +45,11 @@
 	<?php endif?>
 
 <!--    --><?php //$this->renderPartial('//layouts/_flashes'); ?>
-    <?php if (Yii::app()->user->hasFlash('success')): ?>
-        <div id="success_flash">
-            <?php echo Yii::app()->user->getFlash('success'); ?>
-        </div>
-    <?php endif; ?>
+<!--    --><?php //if (Yii::app()->user->hasFlash('success')): ?>
+<!--        <div id="success_flash">-->
+<!--            --><?php //echo Yii::app()->user->getFlash('success'); ?>
+<!--        </div>-->
+<!--    --><?php //endif; ?>
 	<?php echo $content; ?>
 
 	<div class="clear"></div>
