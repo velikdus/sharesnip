@@ -17,5 +17,8 @@ return CMap::mergeArray(
                 'enableProfiling' => true
             ),
         ),
+        'params' => array(
+            'test' => '/index-test.php'
+        ),
     )
 );
